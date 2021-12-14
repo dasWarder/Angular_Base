@@ -1,0 +1,18 @@
+<div class="cardBody">
+  <h2>{{ title }}</h2>
+  <p>{{ text }}</p>
+  <img class="contact-logo" [src]="imageUrl">
+  <div>
+    <label for="text-input">Dynamic change text: </label>
+    <input id="text-input" type="text" #textInput (input)="inputHandler(textInput.value)" [value]="text">
+    <button (click)="releaseText()">Change text</button>
+  </div>
+  <hr/>
+  <button
+    (click)="showInfo()">
+    {{ value }} user info
+  </button>
+  <div *ngIf="isAvailable">
+    <p>{{ getUserInfo() }}</p>
+  </div>
+</div>

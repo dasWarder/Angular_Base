@@ -1,0 +1,9 @@
+<div class="form-component">
+  <h2>Form module</h2>
+  <p>{{ text }}</p>
+  <div>
+    <label for="input-details">Details text: </label>
+    <input id="input-details" type="text" [(ngModel)]="inputText">
+    <button (click)="releaseText()">Release text</button>
+  </div>
+</div>
