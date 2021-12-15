@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import { Card } from '../interfaces/icard.type';
 
 type ButtonText = 'show' | 'hide';
 
@@ -8,6 +9,9 @@ type ButtonText = 'show' | 'hide';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
+
+  @Input()
+  card!: Card;
 
   isAvailable: boolean = false;
 
@@ -32,6 +36,6 @@ export class CardComponent {
   }
 
   releaseText = () => {
-    this.text = this.inputText;
+    this.card.text = this.inputText;
   }
 }

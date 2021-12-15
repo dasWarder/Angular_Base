@@ -1,10 +1,10 @@
 <div class="cardBody">
-  <h2>{{ title }}</h2>
-  <p>{{ text }}</p>
+  <h2>{{ card.title }}</h2>
+  <p>{{ card.text }}</p>
   <img class="contact-logo" [src]="imageUrl">
   <div>
     <label for="text-input">Dynamic change text: </label>
-    <input id="text-input" type="text" #textInput (input)="inputHandler(textInput.value)" [value]="text">
+    <input id="text-input" type="text" #textInput (input)="inputHandler(textInput.value)" [value]="card.text">
     <button (click)="releaseText()">Change text</button>
   </div>
   <hr/>

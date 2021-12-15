@@ -9,6 +9,7 @@ export class FormComponent {
 
   text: string = 'Some form text';
   inputText: string = '';
+  textColor: string = '';
 
   releaseText = () : void => {
     this.text = this.inputText;
